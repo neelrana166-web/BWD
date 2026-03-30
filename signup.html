@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+<title>WallpaperHub - Sign Up</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.signup-box {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.signup-box h2 {
+    margin-bottom: 20px;
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-box button:hover {
+    background: #17687a;
+}
+
+.signup-box a {
+    color: #2193b0;
+    text-decoration: none;
+}
+
+.desc {
+    background: #2193b0;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.desc p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>WallpaperHub</h1>
+</header>
+
+<div class="signup-container">
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="password" id="confirm" placeholder="Confirm Password">
+
+        <button onclick="signup()">Sign Up</button>
+
+        <p style="margin-top:10px;">
+            Already have an account? 
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+</div>
+
+<section class="desc">
+    <h2>Join WallpaperHub</h2>
+    <p>
+        Create your account on WallpaperHub and unlock access to a wide collection of high-quality wallpapers. 
+        From nature to anime, explore categories that suit your style and download wallpapers easily. 
+        Our platform is designed to give users a smooth and enjoyable browsing experience with a modern interface.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 WallpaperHub | Free Wallpaper Website</p>
+</footer>
+
+<script>
+function signup() {
+    var user = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
+    var confirm = document.getElementById("confirm").value;
+
+    if (user === "" || email === "" || pass === "" || confirm === "") {
+        alert("Please fill all fields");
+    }
+    else if (user.length < 3) {
+        alert("Username must be at least 3 characters");
+    }
+    else if (!email.includes("@")) {
+        alert("Enter valid email");
+    }
+    else if (pass.length < 4) {
+        alert("Password must be at least 4 characters");
+    }
+    else if (pass !== confirm) {
+        alert("Passwords do not match");
+    }
+    else {
+        alert("Signup Successful!");
+        window.location.href = "login.html";
+    }
+}
+</script>
+
+</body>
+</html>
