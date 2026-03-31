@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f4f4f4;
+     background: linear-gradient(to right,rgb(252, 250, 250),rgb(245, 231, 231));
     color: #333;
 }
 
@@ -36,7 +36,7 @@ nav a:hover{
 .wp {
     text-align: center;
     padding: 100px 40px;
-    background:skyblue;
+    background:linear-gradient(to right,rgb(162, 234, 247), rgb(115, 216, 244));
     color: white;
 }
 .wp h2 {
